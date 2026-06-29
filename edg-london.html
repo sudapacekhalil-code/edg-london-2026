@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EDG 无畏契约 | 2026 伦敦大师赛季军</title>
+<style>
+  :root { --bg: #0a0a0a; --card: #141414; --red: #e01e37; --gold: #c9a84c; --text: #e0e0e0; --muted: #888; --border: #222; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, "Noto Sans SC", "Microsoft YaHei", sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; overflow-x: hidden; }
+  .hero { min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; background: radial-gradient(ellipse at center, #1a0a0a 0%, #0a0a0a 70%); position: relative; padding: 2rem; }
+  .hero-badge { display: inline-block; border: 1px solid var(--gold); color: var(--gold); padding: 0.35rem 1.5rem; border-radius: 50px; font-size: 0.85rem; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 2rem; }
+  .hero h1 { font-size: clamp(2.5rem, 8vw, 6rem); font-weight: 900; line-height: 1.1; background: linear-gradient(180deg, #fff 0%, #999 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+  .hero h1 span { color: var(--red); -webkit-text-fill-color: var(--red); }
+  .hero .subtitle { font-size: clamp(1.2rem, 3vw, 1.8rem); color: var(--muted); margin-top: 1rem; letter-spacing: 2px; }
+  .hero .result-highlight { display: flex; gap: 1.5rem; margin-top: 3rem; flex-wrap: wrap; justify-content: center; }
+  .hero .stat-card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem 2.5rem; min-width: 140px; }
+  .hero .stat-num { font-size: 2.5rem; font-weight: 800; color: var(--red); }
+  .hero .stat-label { font-size: 0.85rem; color: var(--muted); margin-top: 0.25rem; }
+  .scroll-hint { position: absolute; bottom: 2rem; color: var(--muted); font-size: 0.8rem; letter-spacing: 2px; animation: bounce 2s infinite; }
+  @keyframes bounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(8px)} }
+  section { max-width: 1000px; margin: 0 auto; padding: 5rem 1.5rem; }
+  .section-title { font-size: 2rem; font-weight: 800; text-align: center; margin-bottom: 3rem; letter-spacing: 1px; }
+  .section-title span { color: var(--red); }
+  .timeline { position: relative; }
+  .timeline::before { content: ''; position: absolute; left: 50%; transform: translateX(-50%); width: 2px; height: 100%; background: var(--border); top: 0; }
+  .match { display: grid; grid-template-columns: 1fr 40px 1fr; align-items: start; gap: 1.5rem; margin-bottom: 3rem; position: relative; }
+  .match .dot { width: 14px; height: 14px; border-radius: 50%; margin: 0 auto; position: relative; z-index: 1; }
+  .dot.win  { background: var(--red); box-shadow: 0 0 12px var(--red); }
+  .dot.loss { background: #555; }
+  .match-card { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 1.5rem; }
+  .match-card.winner { border-color: #3a1a1a; }
+  .match-card .round { font-size: 0.75rem; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; }
+  .match-card h3 { font-size: 1.1rem; margin-bottom: 0.3rem; }
+  .match-card .score { font-size: 1.8rem; font-weight: 800; color: var(--red); }
+  .match-card .score.lost { color: var(--muted); }
+  .match-card .detail { font-size: 0.85rem; color: var(--muted); margin-top: 0.25rem; }
+  .match .col-empty { visibility: hidden; }
+  @media (max-width: 700px) { .timeline::before { left: 20px; } .match { grid-template-columns: 1fr; padding-left: 40px; } .match .dot { position: absolute; left: 13px; top: 8px; } .match .col-empty { display: none; } }
+  .bracket-section { text-align: center; }
+  .bracket-box { display: inline-block; background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 2rem 3rem; margin: 1rem; min-width: 240px; }
+  .bracket-box h3 { color: var(--gold); font-size: 0.8rem; letter-spacing: 2px; margin-bottom: 0.5rem; }
+  .bracket-box .teams { font-size: 1.2rem; font-weight: 700; }
+  .bracket-box .teams .winner { color: var(--red); }
+  footer { text-align: center; padding: 3rem 1.5rem; border-top: 1px solid var(--border); color: var(--muted); font-size: 0.85rem; }
+  footer a { color: var(--red); text-decoration: none; }
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="hero-badge">VCT Masters London 2026</div>
+  <h1>EDG <span>季军</span></h1>
+  <p class="subtitle">追平队史大师赛最佳战绩</p>
+  <div class="result-highlight">
+    <div class="stat-card"><div class="stat-num">3rd</div><div class="stat-label">最终排名</div></div>
+    <div class="stat-card"><div class="stat-num">CN #1</div><div class="stat-label">赛区种子</div></div>
+    <div class="stat-card"><div class="stat-num">472天</div><div class="stat-label">重返国际三强</div></div>
+  </div>
+  <div class="scroll-hint">向下滚动 ▼</div>
+</header>
+
+<section>
+  <h2 class="section-title">伦敦<span>征途</span></h2>
+  <div class="timeline">
+    <div class="match">
+      <div class="match-card winner"><div class="round">Upper Bracket · 四分之一决赛</div><h3>EDG vs FUT Esports</h3><div class="score">2 – 1</div><div class="detail">CN #1 vs EMEA #3</div></div>
+      <div class="dot win"></div><div class="col-empty"></div>
+    </div>
+    <div class="match">
+      <div class="match-card winner"><div class="round">Upper Bracket · 半决赛</div><h3>EDG vs XLG Esports</h3><div class="score">2 – 1</div><div class="detail">VCT CN 德比内战</div></div>
+      <div class="dot win"></div><div class="col-empty"></div>
+    </div>
+    <div class="match">
+      <div class="col-empty"></div><div class="dot loss"></div>
+      <div class="match-card"><div class="round">Upper Bracket · 决赛</div><h3>Paper Rex · PRX</h3><div class="score lost">1 – 2</div><div class="detail">Pacific #1 · 最终亚军</div></div>
+    </div>
+    <div class="match">
+      <div class="col-empty"></div><div class="dot loss"></div>
+      <div class="match-card"><div class="round">Lower Bracket · 决赛</div><h3>Leviatan · LEV</h3><div class="score lost">0 – 3</div><div class="detail">Americas · 最终冠军</div></div>
+    </div>
+    <div class="match">
+      <div class="match-card winner" style="text-align:center;"><div class="round">最终成绩</div><div class="score" style="font-size:3rem;">季军</div><div class="detail">VCT CN 赛区第三个大师赛季军</div></div>
+      <div style="text-align:center;align-self:center;font-size:1.5rem;"></div><div class="col-empty"></div>
+    </div>
+  </div>
+</section>
+
+<section class="bracket-section">
+  <h2 class="section-title">淘汰赛<span>回顾</span></h2>
+  <div style="display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:1rem;">
+    <div class="bracket-box"><h3>冠军</h3><div class="teams"><span class="winner">Leviatan</span></div><div style="color:var(--muted);font-size:.8rem;">3-2 PRX · 决赛</div></div>
+    <div style="font-size:2rem;color:var(--muted);">←</div>
+    <div class="bracket-box" style="border-color:#3a1a1a;"><h3>亚军</h3><div class="teams">Paper Rex</div><div style="color:var(--muted);font-size:.8rem;">连续三届进决赛</div></div>
+    <div style="font-size:2rem;color:var(--muted);">←</div>
+    <div class="bracket-box" style="border-color:var(--red);"><h3>季军</h3><div class="teams"><span class="winner">EDG</span></div><div style="color:var(--muted);font-size:.8rem;">CN赛区最佳</div></div>
+  </div>
+</section>
+
+<section>
+  <h2 class="section-title">VCT <span>CN</span> 赛区荣耀</h2>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem;">
+    <div style="background:var(--card);border:1px solid var(--border);border-radius:10px;padding:1.5rem;"><div style="color:var(--gold);font-size:.8rem;letter-spacing:2px;">历史最佳</div><p style="margin-top:.5rem;">EDG 在伦敦追平了队史大师赛最佳战绩（季军），上一次是 <strong>2025 曼谷大师赛</strong>。</p></div>
+    <div style="background:var(--card);border:1px solid var(--border);border-radius:10px;padding:1.5rem;"><div style="color:var(--gold);font-size:.8rem;letter-spacing:2px;">CN 赛区</div><p style="margin-top:.5rem;">这是 VCT CN 赛区历史上<strong>第三个大师赛季军</strong>，CN 瓦罗兰正在崛起。</p></div>
+    <div style="background:var(--card);border:1px solid var(--border);border-radius:10px;padding:1.5rem;"><div style="color:var(--gold);font-size:.8rem;letter-spacing:2px;">472 天</div><p style="margin-top:.5rem;">时隔 <strong>472 天</strong>重返国际赛事三强，EDG 用实力证明了自己仍然是顶级战队。</p></div>
+  </div>
+</section>
+
+<footer>
+  <p>EDG — EDward Gaming · 无畏契约分部</p>
+  <p style="margin-top:.5rem;">VCT Masters London 2026 · Copper Box Arena · June 6–21</p>
+  <p style="margin-top:.5rem;">数据来源：<a href="https://www.vlr.gg" target="_blank">VLR.gg</a> · <a href="https://valorantesports.com" target="_blank">Valorant Esports</a></p>
+</footer>
+</body>
+</html>
